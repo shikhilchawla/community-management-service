@@ -28,12 +28,12 @@ public class GroupResource {
     }
 
     @GetMapping("/{groupId}")
-    public ResponseEntity<Group> getGroupById(int groupId) {
+    public ResponseEntity<Group> getGroupById(@PathVariable int groupId) {
         return ResponseEntity.ok().body(groupManagementService.getGroupByGroupId(groupId));
     }
 
     @GetMapping("/community/{communityId}")
-    public ResponseEntity<List<Group>> getGroupsByCommunityId(int communityId){
+    public ResponseEntity<List<Group>> getGroupsByCommunityId(@PathVariable int communityId){
         return ResponseEntity.ok().body(groupManagementService.getGroupsByCommunityId(communityId));
     }
 }

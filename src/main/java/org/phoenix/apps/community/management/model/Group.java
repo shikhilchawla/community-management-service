@@ -11,9 +11,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name="communityGroup")
 public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="group_Id")
     private int groupId;
     private String name;
     private int communityId;

@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,9 +12,8 @@ import java.util.List;
 public class Community {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="communityId")
     private int communityId;
     private String name;
     private String description;
-    @OneToMany
-    private List<Group> communityGroups;
 }
