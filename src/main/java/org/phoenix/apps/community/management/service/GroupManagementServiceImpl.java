@@ -2,10 +2,11 @@ package org.phoenix.apps.community.management.service;
 
 import org.phoenix.apps.community.management.dao.GroupRepository;
 import org.phoenix.apps.community.management.model.Group;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
+@Service
 public class GroupManagementServiceImpl implements GroupManagementService {
     private final GroupRepository groupRepository;
 
