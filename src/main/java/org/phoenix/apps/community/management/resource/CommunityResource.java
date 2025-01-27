@@ -15,6 +15,11 @@ public class CommunityResource {
         this.communityManagementService = communityManagementService;
     }
 
+    @GetMapping("/health")
+    public String healthCheck(){
+        return "Service is healthy.";
+    }
+
     @GetMapping("/{communityId}")
     public ResponseEntity<Community> getCommunityDetailsById(@PathVariable int communityId) {
         return ResponseEntity.ok().body(communityManagementService.getCommunityDetailsByCommunityId(communityId));
